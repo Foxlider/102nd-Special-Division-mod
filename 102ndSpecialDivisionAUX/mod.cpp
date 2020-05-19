@@ -1,0 +1,9 @@
+﻿name = "102nd Special Forces";
+author = "Keelah";
+logoSmall = "logo.paa";
+logo = "logo.paa";
+logoOver = "logo.paa";
+action = "https://discord.gg/2BUuZa3";
+tooltipOwned = "";
+dlcColor[] = {};
+overview = "102nd Special Division armors";

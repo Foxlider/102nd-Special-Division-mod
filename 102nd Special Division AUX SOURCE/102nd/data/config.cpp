@@ -1,0 +1,292 @@
+class CfgPatches
+{
+	class 102nd
+	{
+		author = "Keelah";
+		units[] = {
+			"",
+		};
+	};
+};
+
+class CfgFactionClasses
+{
+	class 102nd
+	{
+		displayname = "102nd";
+	};
+};
+
+class CfgWeapons
+{
+	//---- CLASS DECLARATION
+	//HELMETS
+	class SWLB_P1_SpecOps_Helmet;
+	class SWLB_clone_P1_helmet;
+
+	//VESTS
+	class JLTS_CloneVestOfficer;
+	class JLTS_CloneVestOfficer2;
+	class JLTS_CloneVestCommander;
+	class JLTS_CloneVestLieutenant;
+
+	//UNIFORMS
+	class SWLB_clone_basic_armor;
+	class SWLB_clone_uniform;
+	class JLTS_CloneArmor;
+
+	//DEFAULTS
+	class UniformItem;
+	class Default;
+	class Binocular;
+	class NVGoogles;
+
+	//---- OWN CLASSES
+	//BASE HELMET SPEC OPS
+	class 102nd_Spec_Helmet_SWLB : SWLB_P1_SpecOps_Helmet
+	{
+		author = "Keelah";
+		displayName = "[102nd] Spec Ops Trooper Helmet";
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\102nd_Trooper_Helmet_SpecOps.paa", "\102nd\data\textures\SWLB_P1_SpecOps_Visor_CO.paa"};
+	};
+
+	//KEELAH HELMET SPEC OPS
+	class 102nd_Spec_Helmet_Keelah_SWLB : SWLB_P1_SpecOps_Helmet
+	{
+		author = "Keelah";
+		displayName = "[102nd] Spec Ops Keelah Helmet";
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\102nd_Keelah_Helmet_SpecOps.paa", "\102nd\data\textures\SWLB_P1_SpecOps_Visor_CO.paa"};
+	};
+
+	//BASE HELMET P1
+	class 102nd_P1_Helmet_SWLB : SWLB_clone_P1_helmet
+	{
+		author = "Keelah";
+		displayName = "[102nd] P1 Trooper Helmet";
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\102nd_P1_Helmet_Trooper_.paa"};
+	};
+
+	//KEELAH HELMET P1
+	class 102nd_P1_Helmet_Keelah_SWLB : SWLB_clone_P1_helmet
+	{
+		author = "Keelah";
+		displayName = "[102nd] P1 Keelah Helmet";
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\102nd_P1_Helmet_Keelah_.paa"};
+	};
+
+	//BASE UNIFORM SWLB
+	class 102nd_Spec_Uniform_SWLB : SWLB_clone_basic_armor
+	{
+		author = "Keelah";
+		displayName = "[102nd] Trooper Uniform";
+		class ItemInfo : UniformItem
+		{
+			Armor = 50;
+			uniformModel = "-";
+			uniformClass = 102_Spec_Trooper_SWLB; 
+			containerClass = Supply100;
+			mass = 40;
+			modelSides[] = {6};
+			scope = 2;
+			type = 801;
+			uniformType = "Neopren";
+		};
+	};
+
+	//KEELAH UNIFORM SWLB
+	class 102nd_Keelah_Uniform_SWLB : SWLB_clone_basic_armor
+	{
+		author = "Keelah";
+		displayName = "[102nd] Keelah Uniform";
+		class ItemInfo : UniformItem
+		{
+			Armor = 50;
+			uniformModel = "-";
+			uniformClass = 102_Keelah_SWLB;
+			containerClass = Supply100;
+			mass = 40;
+			modelSides[] = {6};
+			scope = 2;
+			type = 801;
+			uniformType = "Neopren";
+		};
+	};
+
+	//BASE UNIFORM JLTS
+	class 102nd_Spec_Uniform_JLTS : JLTS_CloneArmor
+	{
+		displayName = "[102nd] Trooper Uniform";
+		author = "Keelah";
+		class ItemInfo : UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = 102_Spec_Trooper_JLTS;
+			containerClass = Supply150;
+			mass = 40;
+		};
+	};
+
+	//MEDIC UNIFORM JLTS
+	class 102nd_Medic_Uniform_JLTS : JLTS_CloneArmor
+	{
+		displayName = "[102nd] Medic Uniform";
+		author = "Keelah";
+		class ItemInfo : UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = 102_Spec_Medic_JLTS;
+			containerClass = Supply150;
+			mass = 40;
+		};
+	};
+
+	//KEELAH UNIFORM JLTS
+	class 102nd_Keelah_Uniform_JLTS : JLTS_CloneArmor
+	{
+		displayName = "[102nd] Keelah Uniform";
+		author = "Keelah";
+		class ItemInfo : UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = 102_Keelah_Trooper_JLTS;
+			containerClass = Supply150;
+			mass = 40;
+		};
+	};
+
+	//KEEFE UNIFORM JLTS
+	class 102nd_Keefe_Uniform_JLTS : JLTS_CloneArmor
+	{
+		displayName = "[102nd] Keefe Uniform";
+		author = "Keelah";
+		class ItemInfo : UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = 102_Keefe_Trooper_JLTS;
+			containerClass = Supply150;
+			mass = 40;
+		};
+	};
+
+	//102nd LIEUTENANT VEST
+	class 102nd_Lieutenant_Vest_JLTS : JLTS_CloneVestLieutenant
+	{
+		displayName = "[102nd] Lieutenant vest";
+		author = "Keelah";
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102Officer_vest_co.paa"};
+	};
+
+	class 102nd_Officer_Vest_JLTS : JLTS_CloneVestOfficer
+	{
+		displayName = "[102nd] Officer vest";
+		author = "Keelah";
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102Officer_vest_co.paa"};
+	};
+
+	class 102nd_Commander_Vest_JLTS : JLTS_CloneVestCommander
+	{
+		displayName = "[102nd] Commander vest";
+		author = "Keelah";
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102Officer_vest_co.paa"};
+	};
+};
+
+class CfgVehicles
+{
+	//---- BASE CLASSES
+	class SWLB_clone_assault_base_P2;
+	class JLTS_Clone_P2_DC15A;
+	class JLTS_Clone_P2_medic;
+	class JLTS_Clone_P2_lieutenant;
+
+	//---- UNIFORM OVERRIDES
+	//BASE UNIFORM SWLB
+	class 102_Spec_Trooper_SWLB : SWLB_clone_assault_base_P2
+	{
+		author = "Keelah";
+		displayName = "[102nd] Trooper";
+		faction = "102nd";
+		editorSubcategory = "102nd";
+		backpack = "";
+		uniformClass = 102nd_Spec_Uniform_SWLB;
+		linkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		hiddenSelections[] = {"camo1", "camo2", "insignia"};
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\102_body_Upper.paa", "\102nd\data\textures\102_body_lower.paa"};
+	};
+
+	//KEELAH UNIFORM SWLB
+	class 102_Keelah_SWLB : SWLB_clone_assault_base_P2
+	{
+		author = "Keelah";
+		displayName = "[102nd] Keelah";
+		faction = "102nd";
+		editorSubcategory = "102nd";
+		backpack = "";
+		uniformClass = 102nd_Keelah_Uniform_SWLB;
+		linkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_Keelah_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_Keelah_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		hiddenSelections[] = {"camo1", "camo2", "insignia"};
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\102_body_Upper.paa", "\102nd\data\textures\102_body_lower.paa"};
+	};
+
+	//BASE UNIFORM JLTS
+	class 102_Spec_Trooper_JLTS : JLTS_Clone_P2_DC15A
+	{
+		author = "Keelah";
+		displayName = "[102nd] Trooper";
+		faction = "102nd";
+		editorSubcategory = "102nd";
+		backpack = "";
+		uniformClass = 102nd_Spec_Uniform_JLTS;
+		linkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		hiddenSelections[] = {"camo1", "camo2", "insignia"};
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndTrooper_armor1_co.paa", "\102nd\data\textures\Clone_102ndTrooper_armor2_co.paa"};
+	};
+
+	//MEDIC UNIFORM JLTS
+	class 102_Spec_Medic_JLTS : JLTS_Clone_P2_medic
+	{
+		author = "Keelah";
+		displayName = "[102nd] Medic";
+		faction = "102nd";
+		editorSubcategory = "102nd";
+		backpack = "";
+		uniformClass = 102nd_Medic_Uniform_JLTS;
+		linkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		hiddenSelections[] = {"camo1", "camo2", "insignia"};
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndMedic_armor1_co.paa", "\102nd\data\textures\Clone_102ndMedic_armor2_co.paa"};
+	};
+
+	//KEELAH UNIFORM JLTS
+	class 102_Keelah_Trooper_JLTS : JLTS_Clone_P2_DC15A
+	{
+		author = "Keelah";
+		displayName = "[102nd] Keelah";
+		faction = "102nd";
+		editorSubcategory = "102nd";
+		backpack = "";
+		uniformClass = 102nd_Keelah_Uniform_JLTS;
+		linkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_Keelah_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_Keelah_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		hiddenSelections[] = {"camo1", "camo2", "insignia"};
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndKeelah_armor1_co.paa", "\102nd\data\textures\Clone_102ndKeelah_armor2_co.paa"};
+	};
+
+	//KEEFE UNIFORM JLTS
+	class 102_Keefe_Trooper_JLTS : JLTS_Clone_P2_DC15A
+	{
+		author = "Keelah";
+		displayName = "[102nd] Keefe";
+		faction = "102nd";
+		editorSubcategory = "102nd";
+		backpack = "";
+		uniformClass = 102nd_Keefe_Uniform_JLTS;
+		linkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		hiddenSelections[] = {"camo1", "camo2", "insignia"};
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndKeefe_armor1_co.paa", "\102nd\data\textures\Clone_102ndKeefe_armor2_co.paa"};
+	};
+};
