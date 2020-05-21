@@ -4,7 +4,7 @@ class CfgPatches
 	{
 		author = "Keelah";
 		units[] = {
-			"",
+			"102nd",
 		};
 	};
 };
@@ -74,42 +74,12 @@ class CfgWeapons
 		hiddenSelectionsTextures[] = {"\102nd\data\textures\102nd_P1_Helmet_Keelah_.paa"};
 	};
 
-	//BASE UNIFORM SWLB
-	class 102nd_Spec_Uniform_SWLB : SWLB_clone_basic_armor
+	//TOBY HELMET P1
+	class 102nd_P1_Helmet_Toby_SWLB : SWLB_clone_P1_helmet
 	{
 		author = "Keelah";
-		displayName = "[102nd] Trooper Uniform";
-		class ItemInfo : UniformItem
-		{
-			Armor = 50;
-			uniformModel = "-";
-			uniformClass = 102_Spec_Trooper_SWLB; 
-			containerClass = Supply100;
-			mass = 40;
-			modelSides[] = {6};
-			scope = 2;
-			type = 801;
-			uniformType = "Neopren";
-		};
-	};
-
-	//KEELAH UNIFORM SWLB
-	class 102nd_Keelah_Uniform_SWLB : SWLB_clone_basic_armor
-	{
-		author = "Keelah";
-		displayName = "[102nd] Keelah Uniform";
-		class ItemInfo : UniformItem
-		{
-			Armor = 50;
-			uniformModel = "-";
-			uniformClass = 102_Keelah_SWLB;
-			containerClass = Supply100;
-			mass = 40;
-			modelSides[] = {6};
-			scope = 2;
-			type = 801;
-			uniformType = "Neopren";
-		};
+		displayName = "[102nd] P1 Toby Helmet";
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\102nd_P1_Helmet_Toby_.paa"};
 	};
 
 	//BASE UNIFORM JLTS
@@ -200,35 +170,6 @@ class CfgVehicles
 	class JLTS_Clone_P2_lieutenant;
 
 	//---- UNIFORM OVERRIDES
-	//BASE UNIFORM SWLB
-	class 102_Spec_Trooper_SWLB : SWLB_clone_assault_base_P2
-	{
-		author = "Keelah";
-		displayName = "[102nd] Trooper";
-		faction = "102nd";
-		editorSubcategory = "102nd";
-		backpack = "";
-		uniformClass = 102nd_Spec_Uniform_SWLB;
-		linkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
-		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
-		hiddenSelections[] = {"camo1", "camo2", "insignia"};
-		hiddenSelectionsTextures[] = {"\102nd\data\textures\102_body_Upper.paa", "\102nd\data\textures\102_body_lower.paa"};
-	};
-
-	//KEELAH UNIFORM SWLB
-	class 102_Keelah_SWLB : SWLB_clone_assault_base_P2
-	{
-		author = "Keelah";
-		displayName = "[102nd] Keelah";
-		faction = "102nd";
-		editorSubcategory = "102nd";
-		backpack = "";
-		uniformClass = 102nd_Keelah_Uniform_SWLB;
-		linkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_Keelah_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
-		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_Keelah_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
-		hiddenSelections[] = {"camo1", "camo2", "insignia"};
-		hiddenSelectionsTextures[] = {"\102nd\data\textures\102_body_Upper.paa", "\102nd\data\textures\102_body_lower.paa"};
-	};
 
 	//BASE UNIFORM JLTS
 	class 102_Spec_Trooper_JLTS : JLTS_Clone_P2_DC15A
@@ -288,5 +229,19 @@ class CfgVehicles
 		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
 		hiddenSelections[] = {"camo1", "camo2", "insignia"};
 		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndKeefe_armor1_co.paa", "\102nd\data\textures\Clone_102ndKeefe_armor2_co.paa"};
+	};
+
+	class 102_Toby_Trooper_JLTS : JLTS_Clone_P2_DC15A
+	{
+		author = "Keelah";
+		displayName = "[102nd] Toby";
+		faction = "102nd";
+		editorSubcategory = "102nd";
+		backpack = "";
+		uniformClass = 102nd_Spec_Uniform_JLTS;
+		linkedItems[] = {SWLB_clone_basic_armor, 102nd_P1_Helmet_Toby_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_P1_Helmet_Toby_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		hiddenSelections[] = {"camo1", "camo2", "insignia"};
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndTrooper_armor1_co.paa", "\102nd\data\textures\Clone_102ndTrooper_armor2_co.paa"};
 	};
 };
