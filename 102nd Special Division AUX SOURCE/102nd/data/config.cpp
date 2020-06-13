@@ -12,8 +12,11 @@ class CfgPatches
 class CfgFactionClasses
 {
 	class 102nd
-	{
-		displayname = "102nd";
+	{ displayname = "102nd Special Division";};
+};
+class CfgEditorSubcategories {
+	class SubFaction521stP2 {
+		displayName = "102st Troopers"; //if you want to make custom subcategories under your faction like "men" or "vehicles"
 	};
 };
 
@@ -180,8 +183,8 @@ class CfgVehicles
 		editorSubcategory = "102nd";
 		backpack = "";
 		uniformClass = 102nd_Spec_Uniform_JLTS;
-		linkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
-		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		linkedItems[] = {SWLB_clone_basic_armor, 102nd_P1_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
+		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_P1_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
 		hiddenSelections[] = {"camo1", "camo2", "insignia"};
 		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndTrooper_armor1_co.paa", "\102nd\data\textures\Clone_102ndTrooper_armor2_co.paa"};
 	};
@@ -195,8 +198,8 @@ class CfgVehicles
 		editorSubcategory = "102nd";
 		backpack = "";
 		uniformClass = 102nd_Medic_Uniform_JLTS;
-		linkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
-		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		linkedItems[] = {102nd_P1_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
+		respawnLinkedItems[] = {102nd_P1_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
 		hiddenSelections[] = {"camo1", "camo2", "insignia"};
 		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndMedic_armor1_co.paa", "\102nd\data\textures\Clone_102ndMedic_armor2_co.paa"};
 	};
@@ -210,8 +213,12 @@ class CfgVehicles
 		editorSubcategory = "102nd";
 		backpack = "";
 		uniformClass = 102nd_Keelah_Uniform_JLTS;
-		linkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_Keelah_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
-		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_Keelah_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		linkedItems[] = {102nd_Lieutenant_Vest_JLTS, 102nd_P1_Helmet_Keelah_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
+		respawnLinkedItems[] = {102nd_Lieutenant_Vest_JLTS, 102nd_P1_Helmet_Keelah_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
+		weapons[] = {102nd_DC15A_M, JLTS_DC17SA, "Throw", "Put"};
+		respawnWeapons[] = {102nd_DC15A_M, JLTS_DC17SA, "Throw", "Put"};
+		magazines[] = {"102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "JLTS_DC17SA_mag", "JLTS_DC17SA_mag", "SmokeShell", "SmokeShellGreen", "Chemlight_green", "Chemlight_green", "HandGrenade", "HandGrenade"};
+		respawnMagazines[] = {"102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "102nd_DC15AM_mag", "JLTS_DC17SA_mag", "JLTS_DC17SA_mag", "SmokeShell", "SmokeShellGreen", "Chemlight_green", "Chemlight_green", "HandGrenade", "HandGrenade"};
 		hiddenSelections[] = {"camo1", "camo2", "insignia"};
 		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndKeelah_armor1_co.paa", "\102nd\data\textures\Clone_102ndKeelah_armor2_co.paa"};
 	};
@@ -225,8 +232,8 @@ class CfgVehicles
 		editorSubcategory = "102nd";
 		backpack = "";
 		uniformClass = 102nd_Keefe_Uniform_JLTS;
-		linkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
-		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Spec_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		linkedItems[] = {SWLB_clone_basic_armor, 102nd_P1_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVGo};
+		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_P1_Helmet_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
 		hiddenSelections[] = {"camo1", "camo2", "insignia"};
 		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndKeefe_armor1_co.paa", "\102nd\data\textures\Clone_102ndKeefe_armor2_co.paa"};
 	};
@@ -239,8 +246,8 @@ class CfgVehicles
 		editorSubcategory = "102nd";
 		backpack = "";
 		uniformClass = 102nd_Spec_Uniform_JLTS;
-		linkedItems[] = {SWLB_clone_basic_armor, 102nd_P1_Helmet_Toby_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
-		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_P1_Helmet_Toby_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, ItemRadio};
+		linkedItems[] = {SWLB_clone_basic_armor, 102nd_P1_Helmet_Toby_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
+		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_P1_Helmet_Toby_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
 		hiddenSelections[] = {"camo1", "camo2", "insignia"};
 		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndTrooper_armor1_co.paa", "\102nd\data\textures\Clone_102ndTrooper_armor2_co.paa"};
 	};
