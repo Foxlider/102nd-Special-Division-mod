@@ -20,12 +20,25 @@ class CfgEditorSubcategories {
 	};
 };
 
+class CfgUnitInsignia
+{
+    class 521stMP
+    {
+        displayName = "102nd Special Division";                        // Name displayed in Arsenal
+        author = "Keelah";                                    // Author displayed in Arsenal
+        texture = "\102nd\data\textures\102nd_Insigna.paa";    // Image path
+        textureVehicle = "";                                            // Does nothing, reserved for future use
+    };
+};
+
 class CfgWeapons
 {
 	//---- CLASS DECLARATION
 	//HELMETS
 	class SWLB_P1_SpecOps_Helmet;
 	class SWLB_clone_P1_helmet;
+	class SWLB_P1_Pilot_Helmet;
+	class SWLB_clone_P15_helmet;
 
 	//VESTS
 	class JLTS_CloneVestOfficer;
@@ -84,6 +97,21 @@ class CfgWeapons
 		displayName = "[102nd] P1 Toby Helmet";
 		hiddenSelectionsTextures[] = {"\102nd\data\textures\102nd_P1_Helmet_Toby_.paa"};
 	};
+
+	class 102nd_ARC_P1_Helmet_Zaino : SWLB_clone_P15_helmet 
+	{
+		author = "Keelah"
+		displayName = "[102nd] ARC Zaino Helmet";
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\102nd_ARC_P1_Helmet_Zaino.paa"};
+	};
+
+	class 102nd_Pilot_P1_Helmet_Gooze : SWLB_P1_Pilot_Helmet
+	{
+		author = "Keelah";
+		displayName = "[102nd] P1 Gooze Pilot Helmet";
+		hiddenSelections[] = {"Camo1", "Camo2"};
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\102nd_Pilot_P1_Helmet_Gooze.paa", "\102nd\data\textures\SWLB_P1_Pilot_Lifesupport_CO.paa"};
+	}
 
 	//BASE UNIFORM JLTS
 	class 102nd_Spec_Uniform_JLTS : JLTS_CloneArmor
@@ -171,8 +199,8 @@ class CfgVehicles
 	class JLTS_Clone_P2_DC15A;
 	class JLTS_Clone_P2_medic;
 	class JLTS_Clone_P2_lieutenant;
-
-	//---- UNIFORM OVERRIDES
+	class JLTS_Clone_ARC_backpack;
+	class JLTS_Clone_Backpack_s_RTO;
 
 	//BASE UNIFORM JLTS
 	class 102_Spec_Trooper_JLTS : JLTS_Clone_P2_DC15A
@@ -211,7 +239,7 @@ class CfgVehicles
 		displayName = "[102nd] Keelah";
 		faction = "102nd";
 		editorSubcategory = "102nd";
-		backpack = "";
+		backpack = JLTS_Clone_Backpack_s_RTO;
 		uniformClass = 102nd_Keelah_Uniform_JLTS;
 		linkedItems[] = {102nd_Lieutenant_Vest_JLTS, 102nd_P1_Helmet_Keelah_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
 		respawnLinkedItems[] = {102nd_Lieutenant_Vest_JLTS, 102nd_P1_Helmet_Keelah_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
@@ -248,6 +276,34 @@ class CfgVehicles
 		uniformClass = 102nd_Spec_Uniform_JLTS;
 		linkedItems[] = {SWLB_clone_basic_armor, 102nd_P1_Helmet_Toby_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
 		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_P1_Helmet_Toby_SWLB, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
+		hiddenSelections[] = {"camo1", "camo2", "insignia"};
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndTrooper_armor1_co.paa", "\102nd\data\textures\Clone_102ndTrooper_armor2_co.paa"};
+	};
+
+	class 102_Zaino_Trooper_JLTS : JLTS_Clone_P2_DC15A
+	{
+		author = "Keelah";
+		displayName = "[102nd] Zaino";
+		faction = "102nd";
+		editorSubcategory = "102nd";
+		backpack = JLTS_Clone_ARC_backpack;
+		uniformClass = 102nd_Spec_Uniform_JLTS;
+		linkedItems[] = {SWLB_clone_basic_armor, 102nd_ARC_P1_Helmet_Zaino, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
+		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_ARC_P1_Helmet_Zaino, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
+		hiddenSelections[] = {"camo1", "camo2", "insignia"};
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndTrooper_armor1_co.paa", "\102nd\data\textures\Clone_102ndTrooper_armor2_co.paa"};
+	};
+
+	class 102_Gooze_Pilot_JLTS : JLTS_Clone_P2_DC15A
+	{
+		author = "Keelah";
+		displayName = "[102nd] Gooze";
+		faction = "102nd";
+		editorSubcategory = "102nd";
+		backpack = "";
+		uniformClass = 102nd_Spec_Uniform_JLTS;
+		linkedItems[] = {SWLB_clone_basic_armor, 102nd_Pilot_P1_Helmet_Gooze, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
+		respawnLinkedItems[] = {SWLB_clone_basic_armor, 102nd_Pilot_P1_Helmet_Gooze, ItemMap, ItemCompass, ItemWatch, ItemGPS, JLTS_clone_comlink, JLTS_CloneNVG};
 		hiddenSelections[] = {"camo1", "camo2", "insignia"};
 		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_102ndTrooper_armor1_co.paa", "\102nd\data\textures\Clone_102ndTrooper_armor2_co.paa"};
 	};
