@@ -311,7 +311,6 @@ class CfgVehicles
 	
 	
 	// BACKPACKS
-	
 	class 102nd_Clone_Jumppack : JLTS_Clone_jumppack {
 		author = "Keelah";
 		displayName = "[102nd] Clone Jumppack";
@@ -319,8 +318,8 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\102nd\data\textures\Clone_jumppack_co.paa"};
 		RD501_jumppack_is_jumppack = 1;
 		RD501_jumppack_spam_delay = 1;
-		RD501_jumppack_energy_capacity = 350;
-		RD501_jumppack_recharge = 6;
+		RD501_jumppack_energy_capacity = 400;
+		RD501_jumppack_recharge = 10;
 		RD501_jumppack_jump_effect_script = "RD501_jumppack_fnc_effect_jt_21";
 		RD501_jumppack_effect_points[] = {{"spine3", {0, -0.3, -0.1}}};
 		RD501_jumppack_sound_ignite[] = {"RD501_Jumppack\sounds\cdv21Start.ogg"};
@@ -330,13 +329,47 @@ class CfgVehicles
 		RD501_jumppack_jump_types[] = {{"Forward Jump", {12, 20, 50, 0, 0, 0}}, {"Short Jump", {12, 5, 30, 0, 1, 0}}, {"Fall Saver", {5, 5, 60, 0, 1, 1}}};
 		NSM_jumppack_is_jumppack = 1;
 		NSM_jumppack_spam_delay = 1;
-		NSM_jumppack_energy_capacity = 350;
-		NSM_jumppack_recharge = 5;
+		NSM_jumppack_energy_capacity = 400;
+		NSM_jumppack_recharge = 10;
 		NSM_jumppack_jump_effect_script = "NSM_jumppack_effect_fnc_jt_21";
 		NSM_jumppack_effect_points[] = {{"effect1", {0, 0.6, 1}}, {"effect2", {0, 0.6, 1}}};
 		NSM_jumppack_sound_ignite[] = {"NSM_Main\sounds\cdv21Start.ogg"};
 		NSM_jumppack_sound_land[] = {"NSM_Main\sounds\cdv21End.ogg"};
 		NSM_jumppack_sound_idle[] = {"NSM_Main\sounds\cdv21Idle.ogg"};
 		NSM_jumppack_jump_types[] = {{"Forward Jump", {12, 20, 50, 0, 0, 0}}, {"Short Jump", {12, 5, 30, 0, 1, 0}}, {"Fall Saver", {0, 5, 60, 0, 1, 1}}};
+	};
+
+	class 102nd_Officer_Jumppack : JLTS_Clone_jumppack {
+		author = "Keelah";
+		displayName = "[102nd] Officer Jumppack";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"\102nd\data\textures\Officer_jumppack_co.paa"};
+		RD501_jumppack_is_jumppack = 1;
+		RD501_jumppack_spam_delay = 1;
+		RD501_jumppack_energy_capacity = 200;
+		RD501_jumppack_recharge = 10;
+		RD501_jumppack_jump_effect_script = "RD501_jumppack_fnc_effect_jt_21";
+		RD501_jumppack_effect_points[] = {{"spine3", {0, -0.3, -0.1}}};
+		RD501_jumppack_sound_ignite[] = {"RD501_Jumppack\sounds\cdv21Start.ogg"};
+		RD501_jumppack_sound_land[] = {"RD501_Jumppack\sounds\cdv21End.ogg"};
+		RD501_jumppack_sound_idle[] = {"RD501_Jumppack\sounds\cdv21Idle.ogg"};
+		RD501_jumppack_skin_group[] = {"default_texture_group"};
+		RD501_jumppack_jump_types[] = {{"Forward Jump", {12, 20, 50, 0, 0, 0}}, {"Short Jump", {12, 5, 30, 0, 1, 0}}, {"Fall Saver", {5, 5, 60, 0, 1, 1}}};
+		NSM_jumppack_is_jumppack = 1;
+		NSM_jumppack_spam_delay = 1;
+		NSM_jumppack_energy_capacity = 200;
+		NSM_jumppack_recharge = 10;
+		NSM_jumppack_jump_effect_script = "NSM_jumppack_effect_fnc_jt_21";
+		NSM_jumppack_effect_points[] = {{"effect1", {0, 0.6, 1}}, {"effect2", {0, 0.6, 1}}};
+		NSM_jumppack_sound_ignite[] = {"NSM_Main\sounds\cdv21Start.ogg"};
+		NSM_jumppack_sound_land[] = {"NSM_Main\sounds\cdv21End.ogg"};
+		NSM_jumppack_sound_idle[] = {"NSM_Main\sounds\cdv21Idle.ogg"};
+		NSM_jumppack_jump_types[] = {{"Forward Jump", {12, 20, 50, 0, 0, 0}}, {"Short Jump", {12, 5, 30, 0, 1, 0}}, {"Fall Saver", {0, 5, 60, 0, 1, 1}}};
+		tf_dialog = "JLTS_clone_lr_programmer_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 12000;
+		tf_subtype = "digital_lr";
 	};
 };
