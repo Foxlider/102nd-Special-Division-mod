@@ -15,14 +15,14 @@ class CfgFactionClasses
 	{ displayname = "102nd Special Division";};
 };
 class CfgEditorSubcategories {
-	class SubFaction521stP2 {
+	class SubFaction102nd {
 		displayName = "102st Troopers"; //if you want to make custom subcategories under your faction like "men" or "vehicles"
 	};
 };
 
 class CfgUnitInsignia
 {
-    class 521stMP
+    class 102nd
     {
         displayName = "102nd Special Division";                        // Name displayed in Arsenal
         author = "Keelah";                                    // Author displayed in Arsenal
@@ -98,6 +98,7 @@ class CfgWeapons
 		hiddenSelectionsTextures[] = {"\102nd\data\textures\102nd_P1_Helmet_Toby_.paa"};
 	};
 
+	//ZAINO HELMET ARC
 	class 102nd_ARC_P1_Helmet_Zaino : SWLB_clone_P15_helmet 
 	{
 		author = "Keelah"
@@ -105,6 +106,7 @@ class CfgWeapons
 		hiddenSelectionsTextures[] = {"\102nd\data\textures\102nd_ARC_P1_Helmet_Zaino.paa"};
 	};
 
+	//GOOZE HELMET PILOT
 	class 102nd_Pilot_P1_Helmet_Gooze : SWLB_P1_Pilot_Helmet
 	{
 		author = "Keelah";
