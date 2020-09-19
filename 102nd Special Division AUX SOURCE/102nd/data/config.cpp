@@ -321,7 +321,7 @@ class CfgVehicles
 		RD501_jumppack_is_jumppack = 1;
 		RD501_jumppack_spam_delay = 1;
 		RD501_jumppack_energy_capacity = 400;
-		RD501_jumppack_recharge = 10;
+		RD501_jumppack_recharge = 5;
 		RD501_jumppack_jump_effect_script = "RD501_jumppack_fnc_effect_jt_21";
 		RD501_jumppack_effect_points[] = {{"spine3", {0, -0.3, -0.1}}};
 		RD501_jumppack_sound_ignite[] = {"RD501_Jumppack\sounds\cdv21Start.ogg"};
@@ -332,7 +332,7 @@ class CfgVehicles
 		NSM_jumppack_is_jumppack = 1;
 		NSM_jumppack_spam_delay = 1;
 		NSM_jumppack_energy_capacity = 400;
-		NSM_jumppack_recharge = 10;
+		NSM_jumppack_recharge = 5;
 		NSM_jumppack_jump_effect_script = "NSM_jumppack_effect_fnc_jt_21";
 		NSM_jumppack_effect_points[] = {{"effect1", {0, 0.6, 1}}, {"effect2", {0, 0.6, 1}}};
 		NSM_jumppack_sound_ignite[] = {"NSM_Main\sounds\cdv21Start.ogg"};
@@ -349,7 +349,7 @@ class CfgVehicles
 		RD501_jumppack_is_jumppack = 1;
 		RD501_jumppack_spam_delay = 1;
 		RD501_jumppack_energy_capacity = 200;
-		RD501_jumppack_recharge = 10;
+		RD501_jumppack_recharge = 5;
 		RD501_jumppack_jump_effect_script = "RD501_jumppack_fnc_effect_jt_21";
 		RD501_jumppack_effect_points[] = {{"spine3", {0, -0.3, -0.1}}};
 		RD501_jumppack_sound_ignite[] = {"RD501_Jumppack\sounds\cdv21Start.ogg"};
@@ -360,7 +360,7 @@ class CfgVehicles
 		NSM_jumppack_is_jumppack = 1;
 		NSM_jumppack_spam_delay = 1;
 		NSM_jumppack_energy_capacity = 200;
-		NSM_jumppack_recharge = 10;
+		NSM_jumppack_recharge = 5;
 		NSM_jumppack_jump_effect_script = "NSM_jumppack_effect_fnc_jt_21";
 		NSM_jumppack_effect_points[] = {{"effect1", {0, 0.6, 1}}, {"effect2", {0, 0.6, 1}}};
 		NSM_jumppack_sound_ignite[] = {"NSM_Main\sounds\cdv21Start.ogg"};
